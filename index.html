@@ -3,17 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>meet.we</title>
+    <title>meet.we — Мессенджер</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>meet.we</h1>
-        <p>Мой мессенджер</p>
-        <div id="chat"></div>
-        <input type="text" id="message" placeholder="Напиши сообщение...">
-        <button onclick="sendMessage()">Отправить</button>
+
+    <div class="app">
+
+        <aside class="sidebar">
+            <h1>meet.we</h1>
+
+            <div class="actions">
+                <button onclick="createChat()">+ Новый чат</button>
+                <button onclick="createGroup()">+ Создать группу</button>
+            </div>
+
+            <h3>Мои чаты</h3>
+            <div id="chatList"></div>
+        </aside>
+
+        <main class="main">
+            <header class="chat-header">
+                <div>
+                    <h2 id="chatTitle">Добро пожаловать!</h2>
+                    <p id="chatSubtitle">Выбери чат или создай новый</p>
+                </div>
+            </header>
+
+            <div id="chat"></div>
+
+            <form id="messageForm">
+                <input
+                    type="text"
+                    id="message"
+                    placeholder="Напиши сообщение..."
+                    autocomplete="off"
+                >
+                <button type="submit">➤</button>
+            </form>
+        </main>
+
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
